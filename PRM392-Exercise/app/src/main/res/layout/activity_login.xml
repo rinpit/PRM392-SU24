@@ -9,7 +9,7 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/signin"
+        android:id="@+id/instagram"
         android:text="@string/instagram"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,8 +20,9 @@
         android:hint="@string/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signin"
-        style="@style/StyleEditText"/>
+        android:layout_below="@+id/instagram"
+        style="@style/StyleEditText"
+        />
 
     <EditText
         android:id="@+id/password"
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/username"
         style="@style/StyleEditText"
-        android:inputType="textPassword"/>
+        />
 
     <Button
         android:id="@+id/loginbtn"
@@ -38,7 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
         style="@style/StyleButton"
+
         />
+
     <TextView
         android:id="@+id/forgotpass"
         android:layout_width="wrap_content"
