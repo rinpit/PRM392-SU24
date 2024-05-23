@@ -37,7 +37,7 @@
     </style>
 
     <style name="StyleBackground">
-        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:background">@color/myWindowBackground</item>
     </style>
 
 
