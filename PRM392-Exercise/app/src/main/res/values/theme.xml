@@ -2,7 +2,6 @@
 <resources>
     <style name="AppTheme1"
         parent="Theme.AppCompat.Light.DarkActionBar">
-
         <!--Màu chính (ví dụ nền AppBar)-->
         <item name="colorPrimary">@color/colorPrimary</item>
 
