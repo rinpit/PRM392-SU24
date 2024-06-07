@@ -39,6 +39,10 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.71828")
 //    End exercise 9
 
+//    Start ex12
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+//    End ex12
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
