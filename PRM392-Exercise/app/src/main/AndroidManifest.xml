@@ -23,7 +23,7 @@
 
 <!--Start Exercise 10-->
         <activity
-            android:name=".PermisstionActivity"
+            android:name=".PermissionActivity"
             android:exported="true">
             <intent-filter>
                 <action

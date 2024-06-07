@@ -11,12 +11,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.widget.Toast;
 
-public class PermisstionActivity extends AppCompatActivity {
+public class PermissionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_permisstion);
+        setContentView(R.layout.activity_permission);
 //        setContentView(R.layout.activity_permisstion);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -45,10 +45,10 @@ public class PermisstionActivity extends AppCompatActivity {
                     ActivityResultContracts.RequestPermission(), isGranted -> {
                 if (isGranted) {
                     // Permission is granted. You can perform the related task
-                    Toast.makeText(PermisstionActivity.this, "Permission granted", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PermissionActivity.this, "Permission granted", Toast.LENGTH_SHORT).show();
                 } else {
                     // Permission is denied. Show a message to the user
-                    Toast.makeText(PermisstionActivity.this, "Permission denied", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PermissionActivity.this, "Permission denied", Toast.LENGTH_SHORT).show();
                 }
             });
 }
