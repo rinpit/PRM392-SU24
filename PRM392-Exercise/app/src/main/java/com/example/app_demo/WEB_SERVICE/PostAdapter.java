@@ -20,7 +20,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         void onEditClick(Post post);
         void onDeleteClick(Post post);
     }
-6
     public PostAdapter(Context context, List<Post> postList, OnItemClickListener listener) {
         this.context = context;
         this.postList = postList;

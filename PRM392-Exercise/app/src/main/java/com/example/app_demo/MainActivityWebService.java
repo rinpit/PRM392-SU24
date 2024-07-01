@@ -25,7 +25,7 @@ import retrofit2.Response;
 public class MainActivityWebService extends AppCompatActivity {
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
-    private Button fab;
+    Button button;
     private ApiService apiService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +38,11 @@ public class MainActivityWebService extends AppCompatActivity {
             return insets;
         });
         recyclerView = findViewById(R.id.recyclerView);
-        fab = findViewById(R.id.fab);
+        button = findViewById(R.id.button1);
         apiService = ApiClient.getApiService();
         recyclerView.setLayoutManager(new
                 LinearLayoutManager(this));
-        fab.setOnClickListener(v -> {
+        button.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivityWebService.this,
                     AddPostActivity.class);
             startActivity(intent);
@@ -55,7 +55,8 @@ public class MainActivityWebService extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    postAdapter = new PostAdapter(MainActivityWebService.this, response.body(), new PostAdapter().OnItemClickListener() {
+                    postAdapter = new PostAdapter(MainActivityWebService.this, response.body(),
+                            new PostAdapter().OnItemClickListener() {
                         @Override
                         public void onEditClick(Post post) {
                                     // Handle edit post
@@ -64,7 +65,8 @@ public class MainActivityWebService extends AppCompatActivity {
                             public void onDeleteClick(Post post) {
                                     // Handle delete post
                                 }
-                            });
+
+                    });
                     recyclerView.setAdapter(postAdapter);
                 }
             }

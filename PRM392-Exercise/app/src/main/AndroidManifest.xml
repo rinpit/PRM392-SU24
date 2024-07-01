@@ -23,21 +23,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
+        <service
+            android:name=".SERVICE.MyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
         <provider
             android:name=".CONTENT_PROVIDER.ContactsProvider"
             android:authorities="com.example.app_demo.CONTENT_PROVIDER"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.app.slice.category.SLICE" />
-
                 <data
                     android:host="CONTENT_PROVIDER.app_demo.example.com"
                     android:pathPrefix="/"
                     android:scheme="http" />
             </intent-filter>
         </provider>
+        <!-- Start Exercise 16 -->
+        <activity
+            android:name=".MainActivityService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- End Exercise 16 -->
+        <!-- Start Exercise 16 -->
+        <activity
+            android:name=".MainActivityWebService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- End Exercise 16 -->
         <!-- Start Exercise 15 -->
         <activity
             android:name=".MainActivityContentProvider"
