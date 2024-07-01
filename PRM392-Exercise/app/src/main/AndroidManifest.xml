@@ -28,6 +28,30 @@
         android:theme="@style/Theme.AppCompat"
         >
 
+
+
+
+
+
+        <!-- Start Exercise 14-->
+        <activity
+            android:name=".MainActivityDataStorage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".FileActivityDataStorage"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- End Exercise 14-->
         <!-- Start Exercise 13-->
         <activity
             android:name=".MainActivityRoomDatabase"
