@@ -55,18 +55,18 @@ public class MainActivityWebService extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    postAdapter = new PostAdapter(MainActivityWebService.this, response.body(),
-                            new PostAdapter().OnItemClickListener() {
-                        @Override
-                        public void onEditClick(Post post) {
+                    postAdapter = new
+                            PostAdapter(MainActivityWebService.this, response.body(), new
+                            PostAdapter.OnItemClickListener() {
+                                @Override
+                                public void onEditClick(Post post) {
                                     // Handle edit post
-                            }
-                            @Override
-                            public void onDeleteClick(Post post) {
+                                }
+                                @Override
+                                public void onDeleteClick(Post post) {
                                     // Handle delete post
                                 }
-
-                    });
+                            });
                     recyclerView.setAdapter(postAdapter);
                 }
             }
@@ -76,5 +76,6 @@ public class MainActivityWebService extends AppCompatActivity {
             }
         });
     }
+
 }
 
