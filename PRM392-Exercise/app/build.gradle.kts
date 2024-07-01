@@ -43,6 +43,12 @@ dependencies {
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
 //    End ex12
 
+//    Start ex13
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+//    def room_version = "2.5.0"
+    implementation ("androidx.room:room-runtime:2.5.0")
+    annotationProcessor ("androidx.room:room-compiler:2.5.0")
+//    End ex13
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

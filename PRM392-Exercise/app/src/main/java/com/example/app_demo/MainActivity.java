@@ -53,8 +53,4 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Log.i("MainActivity", "State: Destroy");
     }
-
-
-
-
 }

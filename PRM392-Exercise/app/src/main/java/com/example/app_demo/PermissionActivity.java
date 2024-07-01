@@ -28,8 +28,7 @@ public class PermissionActivity extends AppCompatActivity {
         });
         // Check if the permission is already granted
         if (ContextCompat.checkSelfPermission(this,
-                android.Manifest.permission.READ_CONTACTS) ==
-                PackageManager.PERMISSION_GRANTED) {
+                android.Manifest.permission.READ_CONTACTS) == PackageManager.PERMISSION_GRANTED) {
             // Permission is already granted, you can perform the related task
             Toast.makeText(this, "Permission already granted",
                     Toast.LENGTH_SHORT).show();

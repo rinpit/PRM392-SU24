@@ -39,7 +39,7 @@ public class UpdateCourseActivity extends AppCompatActivity{
         buttonDelete = findViewById(R.id.button_delete);
         // DBHandler
         dbHandler = new DBHandler(this);
-        // Get Course ID
+        // Get com.example.app_demo.ROOM_DATABASE.Course ID
         Intent intent = getIntent();
         String courseId = intent.getStringExtra("course_id");
         course = dbHandler.getCourse(courseId);// Get course by id
