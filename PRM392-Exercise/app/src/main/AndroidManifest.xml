@@ -42,7 +42,16 @@
                     android:scheme="http" />
             </intent-filter>
         </provider>
-
+        <!-- Start Exercise 19 -->
+        <activity
+            android:name=".MainActivityFragment"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- End Exercise 19 -->
         <!-- Start Exercise 18 -->
         <activity
             android:name=".MainActivityThread"
